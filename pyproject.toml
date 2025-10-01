@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "chunking-evaluation",
     "langchain>=0.3.27",
     "langchain-community>=0.3.30",
     "llama-index>=0.14.3",
@@ -12,6 +13,10 @@ dependencies = [
     "pdfminer>=20191125",
     "poppler-utils>=0.1.0",
     "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
     "sentence-transformers>=5.1.1",
     "unstructured[all-docs]>=0.18.15",
 ]
+
+[tool.uv.sources]
+chunking-evaluation = { git = "https://github.com/brandonstarxel/chunking_evaluation.git" }

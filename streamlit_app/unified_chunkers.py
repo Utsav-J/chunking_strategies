@@ -353,37 +353,29 @@ def get_available_strategies() -> Dict[str, Any]:
             "description": "Fixed-size character splitting",
             "params": ["chunk_size", "chunk_overlap"],
             "defaults": {"chunk_size": 100, "chunk_overlap": 0},
-            "available": True
+            "available": True,
+            "url": "https://github.com/Utsav-J/chunking_strategies/blob/main/1-character-chunking/README.md"  
         },
         "Recursive Character Chunking": {
             "description": "Hybrid approach with multiple separators",
             "params": ["chunk_size", "chunk_overlap"],
             "defaults": {"chunk_size": 200, "chunk_overlap": 20},
-            "available": True
-        },
-        "Markdown Chunking": {
-            "description": "Markdown-aware splitting",
-            "params": ["chunk_size", "chunk_overlap"],
-            "defaults": {"chunk_size": 200, "chunk_overlap": 25},
-            "available": True
-        },
-        "Python Chunking": {
-            "description": "Python code-aware splitting",
-            "params": ["chunk_size", "chunk_overlap"],
-            "defaults": {"chunk_size": 200, "chunk_overlap": 25},
-            "available": True
+            "available": True,
+            "url": "https://github.com/Utsav-J/chunking_strategies/blob/main/2-recursive-character/README.md"  # TODO: Add strategy documentation URL
         },
         "Semantic Chunking": {
             "description": "Embedding-based semantic splitting",
             "params": ["buffer_size", "breakpoint_percentile"],
             "defaults": {"buffer_size": 1, "breakpoint_percentile": 95.0},
-            "available": HAVE_SEMANTIC
+            "available": HAVE_SEMANTIC,
+            "url": "https://github.com/Utsav-J/chunking_strategies/blob/main/4-semantic-chunking/README.md"  # TODO: Add strategy documentation URL
         },
         "Cluster Semantic Chunking": {
             "description": "Global optimization for semantic coherence",
             "params": ["max_chunk_size", "min_chunk_size"],
             "defaults": {"max_chunk_size": 400, "min_chunk_size": 50},
-            "available": HAVE_CLUSTER
+            "available": HAVE_CLUSTER,
+            "url": "https://github.com/Utsav-J/chunking_strategies/blob/main/5-cluster-semantic-chunking/README.md" 
         }
     }
     return strategies

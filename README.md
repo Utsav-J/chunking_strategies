@@ -98,3 +98,61 @@ It’s especially important in **Retrieval-Augmented Generation (RAG)** and **do
 3. Consider **overlaps** for context-heavy use cases.
 4. For production RAG: **Recursive chunking + overlap** is often the sweet spot.
 
+---
+
+## 🚀 Interactive Comparison Tool
+
+This project now includes a **Streamlit-based interactive comparison tool** to visualize and compare all chunking strategies side-by-side!
+
+### Quick Start
+
+1. **Install dependencies:**
+   ```bash
+   uv sync
+   ```
+
+2. **Run the Streamlit app:**
+   ```bash
+   streamlit run streamlit_app/app.py
+   ```
+
+3. **Use the app:**
+   - Upload a text file or paste your content
+   - Select multiple chunking strategies
+   - Adjust parameters for each strategy
+   - Compare results side-by-side with visualizations
+   - Download chunked results
+
+### Features
+
+- 📊 **Visual Comparisons**: Charts showing number of chunks and size distributions
+- ⚙️ **Configurable**: Adjust parameters for each strategy
+- 📝 **Detailed Views**: Preview individual chunks from each strategy
+- 📥 **Export**: Download chunked results as text files
+- 🔄 **Multiple Strategies**: Run and compare up to 6 different chunking methods
+
+See `QUICKSTART.md` for detailed instructions and `streamlit_app/README.md` for full documentation.
+
+---
+
+## 📁 Project Structure
+
+```
+chunking-strategies/
+├── 1-character-chunking/       # Fixed-size character chunking
+├── 2-recursive-character/      # Recursive character text splitter
+├── 3-document-specific/        # Document-type aware chunkers
+│   ├── markdown.py
+│   ├── python_splitter.py
+│   └── language_splitter.py
+├── 4-semantic-chunking/        # Embedding-based semantic chunking
+├── 5-cluster-semantic-chunking/ # Global optimization semantic chunking
+├── streamlit_app/              # 🆕 Interactive comparison tool
+│   ├── app.py                  # Main Streamlit application
+│   ├── unified_chunkers.py     # Unified chunking interface
+│   ├── README.md               # App documentation
+│   └── sample_text.txt         # Example text file
+├── pyproject.toml              # Dependencies
+├── QUICKSTART.md               # 🆕 Quick start guide
+└── README.md                   # This file
+
